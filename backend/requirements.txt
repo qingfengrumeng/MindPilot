@@ -1,0 +1,16 @@
+fastapi>=0.120,<1
+uvicorn[standard]>=0.30,<1
+sqlalchemy>=2.0,<3
+alembic>=1.13,<2
+pydantic>=2.9,<3
+PyJWT>=2.9,<3
+argon2-cffi>=23.1,<26
+httpx>=0.27,<1
+python-multipart>=0.0.9,<1
+langgraph>=1,<2
+PyYAML>=6,<7
+Pillow>=10,<13
+pdfplumber>=0.11,<1
+chromadb>=0.5,<2
+websocket-client>=1.8,<2
+tiktoken>=0.7,<1

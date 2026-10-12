@@ -1,0 +1,12 @@
+{
+  "id": "mindmap",
+  "content_rules": "把思维导图当成主题与层级关系：中心主题只有一个，一级分支是并列的主题类别，二级分支补充细节。同一主题下的子节点保持语义平行，避免混用方法、结论和时间。不要把执行顺序、判断条件或回退环伪装成主题分支。",
+  "layout_rules": "固定使用 mindmap 布局，围绕中心主题平衡左右子树，同一分支保持同一色系，一级分支比子节点更醒目，二级分支轻一些。连接线表达归属而非执行方向，不使用流程箭头。",
+  "review_rules": "检查中心主题、分支父子关系和左右平衡；同一家族的节点与连接线颜色应一致，连接线不应带流程箭头。",
+  "connector_end_arrow": "none",
+  "layout_strategy": "radial_tree",
+  "max_retries": 3,
+  "max_layered_nodes": 16,
+  "max_layered_depth": 6,
+  "vertical_from_depth": 4
+}

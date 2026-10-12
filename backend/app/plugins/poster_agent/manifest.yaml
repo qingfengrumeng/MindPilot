@@ -1,0 +1,21 @@
+id: poster_agent
+version: 1.0.0
+description: 海报设计功能域：视觉模型理解上传素材，主管调度需求与文案、视觉设计、HTML 渲染和截图质检，交付 HTML、PNG、PDF。
+intents:
+  - poster
+inputs:
+  - query
+  - image_preview_ids
+  - image_names
+outputs:
+  - poster_html
+  - poster_png
+  - poster_pdf
+required_tools:
+  - poster_asset_prepare
+  - poster_render
+  - web_search
+  - poster_image_generate
+timeout_seconds: 300
+entrypoint: app.plugins.poster_agent.agent:run
+input_schema: app.plugins.poster_agent.agent:PosterInputs

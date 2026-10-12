@@ -1,0 +1,20 @@
+id: knowledge_agent
+version: 1.0.0
+description: 回答知识问题，按需检索用户知识库和联网资料；深度思考时进行反思评估。
+intents:
+  - knowledge_qa
+inputs:
+  - query
+  - deep_thinking
+  - use_web
+  - source_ids
+outputs:
+  - answer_artifact
+  - citations
+required_tools:
+  - rag_search
+  - web_search
+  - current_datetime
+  - read_artifact
+entrypoint: app.plugins.knowledge_agent.agent:run
+input_schema: app.plugins.knowledge_agent.agent:KnowledgeInputs

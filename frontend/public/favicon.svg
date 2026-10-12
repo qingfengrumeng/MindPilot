@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42" width="42" height="42" role="img" aria-label="MindPilot">
+  <title>MindPilot · 本地个人知识助手</title>
+  <!--
+    与应用内 .logo-mark 完全一致：42×42 圆角 14px、135° 紫罗兰渐变。
+    <g> 的 translate(10.5 10.5) scale(0.875) 复现 lucide <Compass :size="21" /> 在
+    42×42 网格中居中渲染的效果（24 视图单位 → 21 像素，故 stroke-width 2 → 1.75 像素）。
+  -->
+  <defs>
+    <linearGradient id="mindpilot-mark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4c0b9b" />
+      <stop offset="1" stop-color="#7c3aed" />
+    </linearGradient>
+  </defs>
+  <rect width="42" height="42" rx="14" fill="url(#mindpilot-mark)" />
+  <g transform="translate(10.5 10.5) scale(0.875)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z" />
+    <circle cx="12" cy="12" r="10" />
+  </g>
+</svg>

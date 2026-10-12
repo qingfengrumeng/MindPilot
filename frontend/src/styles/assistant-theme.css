@@ -1,0 +1,77 @@
+/* Shared deep-space palette. Reading surfaces stay light; actions use the
+   virtual assistant's navy surface and restrained cyan edge light. */
+:root {
+  --brand: #2e1250;
+  --brand-strong: #18082b;
+  --brand-soft: #efeaf5;
+  --ink: #26163a;
+  --text: #423059;
+  --line: #e4dced;
+  --control-surface: radial-gradient(ellipse at 75% 110%,rgba(142,56,248,.19),transparent 70%),linear-gradient(135deg,#10071c,#261040);
+  --control-hover: radial-gradient(ellipse at 75% 110%,rgba(169,103,249,.24),transparent 70%),linear-gradient(135deg,#190a2b,#2f164e);
+  --control-edge: rgba(169,103,249,.28);
+  --control-shadow: 0 7px 18px rgba(14,4,26,.16),inset 0 1px 0 rgba(199,159,249,.17);
+}
+
+:root .btn:not(.secondary):not(.ghost):not(.danger),
+:root .workspace-shell .conversation-new-chat,
+:root .chat-workspace .assistant-enter,
+:root .assistant-send:not(:disabled),
+:root .assistant-work-type.active .assistant-work-icon,
+:root .logo-mark,
+:root .avatar,
+:root .profile-avatar,
+:root .sidebar-account-avatar,
+:root .assistant-welcome-mark,
+:root .chat-message .message-avatar,
+:root .chat-message.user .message-bubble {
+  color: #f2e7ff;
+  background: var(--control-surface);
+  box-shadow: var(--control-shadow),inset 0 0 0 1px var(--control-edge);
+}
+:root .workspace-shell .conversation-new-chat:hover,
+:root .chat-workspace .assistant-enter:hover,
+:root .assistant-send:not(:disabled):hover,
+:root .btn:not(.secondary):not(.ghost):not(.danger):hover {
+  background: var(--control-hover);
+  box-shadow: 0 9px 22px rgba(14,4,26,.2),inset 0 0 0 1px rgba(169,103,249,.42);
+}
+:root .assistant-work-type.active .assistant-work-icon svg,
+:root .chat-message .message-avatar svg,
+:root .logo-mark svg {
+  color: #caa5f8;
+}
+:root .workspace-nav nav a.router-link-active,
+:root .conversation-item.active {
+  color: #331657;
+  background: #eee8f5;
+}
+:root .workspace-nav nav a.router-link-active svg,
+:root .conversation-item.active svg,
+:root .assistant-work-check,
+:root .composer-skill-chip {
+  color: #452073;
+}
+:root .assistant-work-type.active {
+  border-color: #a58bc4;
+  box-shadow: 0 0 0 3px rgba(46,18,80,.055),0 8px 22px rgba(16,7,28,.06);
+}
+:root .review-assistant-page {
+  background:
+    radial-gradient(ellipse at 52% 16%,rgba(110,56,177,.07),transparent 46%),
+    radial-gradient(ellipse at 90% 92%,rgba(155,103,219,.055),transparent 42%),
+    linear-gradient(135deg,#f9f7fc,#f2edf7 55%,#f7f4fa);
+}
+:root .review-assistant-page:before {
+  background: radial-gradient(circle,rgba(88,45,140,.045),transparent 68%);
+}
+:root .review-assistant-page:after {
+  background: radial-gradient(circle,rgba(115,69,172,.055),transparent 70%);
+}
+:root .assistant-topbar:after { background:linear-gradient(90deg,#2e1250,transparent); }
+:root .assistant-conversation-title:before { background:#2e1250; }
+:root .assistant-hero-composer:focus-within,
+:root .assistant-bottom-composer:focus-within {
+  border-color:#aa95c4;
+  box-shadow:0 18px 45px rgba(27,9,49,.1),0 0 0 3px rgba(110,56,177,.04);
+}

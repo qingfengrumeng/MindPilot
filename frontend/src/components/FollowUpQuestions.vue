@@ -1,0 +1,14 @@
+<script setup>
+import { ArrowUpRight, Lightbulb, MessageSquareText } from 'lucide-vue-next'
+defineProps({items:{type:Array,default:()=>[]},disabled:Boolean})
+const emit=defineEmits(['choose'])
+</script>
+<template>
+  <section class="followup-questions" aria-label="后续问题推荐">
+    <div class="followup-heading"><Lightbulb :size="15"/><span>你可以继续问</span></div>
+    <div class="followup-grid"><button v-for="(item,index) in items" :key="item.question" type="button" :disabled="disabled" :aria-label="item.question" @click="emit('choose',item.question)"><span class="followup-card-top"><span class="followup-number">0{{index+1}}</span><strong>{{item.title}}</strong><ArrowUpRight :size="16"/></span><span class="followup-question">{{item.question}}</span><span class="followup-action"><MessageSquareText :size="12"/>点击继续提问</span></button></div>
+  </section>
+</template>
+<style scoped>
+.followup-questions{margin:0 0 26px 52px;max-width:850px}.followup-heading{display:flex;align-items:center;gap:7px;margin:4px 0 12px;color:#a18baa;font-size:12px}.followup-heading svg{color:#ac88d4}.followup-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.followup-grid>button,.followup-skeleton{min-width:0;padding:16px;border:1px solid #e8dcf4;border-radius:16px;background:linear-gradient(145deg,#fff,#fbf8ff);text-align:left;box-shadow:0 3px 12px #52247b04}.followup-grid>button{display:flex;flex-direction:column;gap:12px;cursor:pointer;transition:background .18s,border-color .18s,box-shadow .18s,transform .18s;font:inherit;color:#74518a}.followup-grid>button:hover:not(:disabled){transform:translateY(-2px);border-color:#ad86df;box-shadow:0 8px 22px #703aa51c;background:#eee3fc}.followup-grid>button:focus-visible{outline:2px solid #a78bfa;outline-offset:3px}.followup-grid>button:disabled{opacity:.5;cursor:default}.followup-card-top{display:flex;align-items:center;gap:8px}.followup-number{font-size:10px;color:#b39ac9}.followup-card-top strong{font-weight:600;font-size:15px;color:#634075}.followup-card-top>svg{margin-left:auto;flex-shrink:0;color:#a785c6}.followup-question{font-size:14px;line-height:1.85;overflow-wrap:anywhere;flex:1}.followup-action{display:flex;align-items:center;gap:5px;color:#b49ac6;font-size:10px}.followup-skeleton{min-height:136px}.followup-skeleton i{display:block;width:70%;height:10px;margin:8px 0 24px;border-radius:5px;background:#eee6f6}.followup-skeleton i+i{width:95%;height:34px;margin:0}.followup-skeleton{animation:followup-pulse 1.5s ease-in-out infinite}@keyframes followup-pulse{50%{opacity:.5}}@media(max-width:700px){.followup-questions{margin-left:0}.followup-grid{grid-template-columns:1fr}.followup-grid>button{padding:14px;gap:9px}.followup-action{display:none}.followup-skeleton{min-height:88px}}@media(prefers-reduced-motion:reduce){.followup-grid>button{transition:none}.followup-grid>button:hover:not(:disabled){transform:none}.followup-skeleton{animation:none}}
+</style>

@@ -1,0 +1,21 @@
+id: diagram_agent
+version: 1.1.0
+description: 绘图功能域：域内总控按流程图或思维导图 profile 调度内容规划、排版、绘图和图稿检查，生成或精确修改可编辑图稿。
+intents:
+  - flowchart
+  - mindmap
+  - diagram_edit
+inputs:
+  - query
+  - kind
+  - artifact_ids
+  - previous_diagram_artifact_id
+outputs:
+  - diagram_artifact
+  - preview_artifact
+required_tools:
+  - diagram_render
+  - read_artifact
+timeout_seconds: 300
+entrypoint: app.plugins.diagram_agent.agent:run
+input_schema: app.plugins.diagram_agent.agent:DiagramInputs

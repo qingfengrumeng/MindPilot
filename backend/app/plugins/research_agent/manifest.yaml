@@ -1,0 +1,21 @@
+id: research_agent
+version: 1.0.0
+description: 检索本地文档和网页证据，形成带来源的研究报告，并可进行质量复核。
+intents:
+  - literature_search
+  - research_report
+inputs:
+  - query
+  - source_scope
+  - deep_thinking
+  - artifact_ids
+outputs:
+  - report_artifact
+  - citations
+required_tools:
+  - rag_search
+  - web_search
+  - write_markdown
+  - read_artifact
+entrypoint: app.plugins.research_agent.agent:run
+input_schema: app.plugins.research_agent.agent:ResearchInputs

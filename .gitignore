@@ -1,0 +1,26 @@
+# Private application data and credentials
+/.mindpoilt/
+**/.mindpoilt/
+/backend/data/
+**/artifacts/
+**/backups/
+.env*
+!**/.env.example
+*.models.json
+models.json
+*.sqlite*
+*.db
+*.db-*
+*.jsonl
+*.log
+*.pem
+*.key
+# Dependencies and generated files
+**/node_modules/
+**/dist/
+**/__pycache__/
+**/.pytest_cache/
+**/.venv/
+**/venv/
+**/.tmp*/
+/.github-upload-check/

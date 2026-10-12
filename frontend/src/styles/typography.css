@@ -1,0 +1,43 @@
+/* Only Latin characters use the shared monospace face; Chinese keeps its fallback. */
+@font-face {
+  font-family: "MindPilot Latin";
+  src: url("@fontsource/jetbrains-mono/files/jetbrains-mono-latin-400-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+0020-007E;
+}
+@font-face {
+  font-family: "MindPilot Latin";
+  src: url("@fontsource/jetbrains-mono/files/jetbrains-mono-latin-500-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  unicode-range: U+0020-007E;
+}
+@font-face {
+  font-family: "MindPilot Latin";
+  src: url("@fontsource/jetbrains-mono/files/jetbrains-mono-latin-600-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  unicode-range: U+0020-007E;
+}
+@font-face {
+  font-family: "MindPilot Latin";
+  src: url("@fontsource/jetbrains-mono/files/jetbrains-mono-latin-700-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  unicode-range: U+0020-007E;
+}
+@font-face {
+  font-family: "MindPilot Latin";
+  src: url("@fontsource/jetbrains-mono/files/jetbrains-mono-latin-800-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  unicode-range: U+0020-007E;
+}
+body { font-variant-numeric: tabular-nums; font-variant-ligatures: none; }
+pre, code, kbd, samp { font-family: "MindPilot Latin", "JetBrains Mono", ui-monospace, Consolas, monospace; }
